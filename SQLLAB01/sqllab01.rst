@@ -71,24 +71,24 @@ If your VM have multiple vCPU, you can choose multiple virtual users help to acc
 
 Driver create is to generate the script for testing and setup “how long we need to test and rampup time” .  Here are steps -
 
-a.	In the Benchmark pane, expand the Driver Script section and double-click Options
+1. In the Benchmark pane, expand the Driver Script section and double-click Options
 
-b.	Configure the SQL Server hostname, IP, login, password, and database name to match the environment. In this case,
+2.	Configure the SQL Server hostname, IP, login, password, and database name to match the environment. In this case,
 use the same settings used when creating the database.
 
-c.	Select the Timed Test Driver script and select the Checkpoint when complete.
+3.	Select the Timed Test Driver script and select the Checkpoint when complete.
 
-d.	To ensure a realistic workload, use five Minutes of Rampup Time and 10 Minutes for Test Duration.
+4.	To ensure a realistic workload, use five Minutes of Rampup Time and 10 Minutes for Test Duration.
 
-e.	Once all settings are configured, click OK to exit the menu
+5.	Once all settings are configured, click OK to exit the menu
 
 .. figure:: images/sql05.png
 
 Note - If you need to run a test with SQL 2008, use SQL Server Native Client 10.0.
 
-f. Next, double-click Load in the Driver Script section of the Benchmark pane to activate the driver script (see the figure below)
+6. Next, double-click Load in the Driver Script section of the Benchmark pane to activate the driver script (see the figure below)
 
-g. Load the driver Script
+7. Load the driver Script
 
 .. figure:: images/sql06.png
 
