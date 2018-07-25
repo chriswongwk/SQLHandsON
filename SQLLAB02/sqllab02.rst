@@ -32,10 +32,10 @@ we need create 100GB x2 locate in PVSCSI 1, 2 , 80 GBx 2 locate in PVSCSI 3,0 , 
 
 In the AHV , just create the disks , do not need to care about multiple virtual scsi
 
-.. figure:: images/lab201.png
+.. figure:: images/Lab201.png
 
 
-.. figure:: images/lab202.png
+.. figure:: images/Lab202.png
 
 
 2.3 Configure vdisks in the ESXi
