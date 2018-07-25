@@ -95,7 +95,7 @@ g. Load the driver Script
 1.7 Configure the virtual users
 +++++++++++++++++++++++++++++++
 
-     Configure how many users you need to run concurrent in the system. In my example,
+Configure how many users you need to run concurrent in the system. In my example,
 I show 100 users running concurrently. But you can try different users and see if the TPM is go up?
 When you add more users then you saw the TPM is not coming up . That means you have some bottleneck in CPU, Memory or IO. You need to figure out why ? Using our Prism and Window performance monitor tools to diagnostic the bottleneck
 Steps –
@@ -126,8 +126,8 @@ f.	Click run
 1.8 Metrics provide by HammerDB
 +++++++++++++++++++++++++++++++
 
-    After you installed the hammnerDB , you can find in your folder have three files cslled “hdbagent.bat”, “hdbagent.tcl”, “ mpstat”.
-    These files are for monitoring the CPU resources in the testing VM .
+After you installed the hammnerDB , you can find in your folder have three files cslled “hdbagent.bat”, “hdbagent.tcl”, “ mpstat”.
+These files are for monitoring the CPU resources in the testing VM .
 
 Running the Agent – please execute the agent in your testing VM .
 Windows just need to double click the .bat file. In the Linux system, you need to execute the .tcl file .
