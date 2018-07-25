@@ -129,7 +129,7 @@ c.Click Add User or Group and add any user accounts that are used for backups.
 
 .. figure:: images/Lab217.png
 
-d.	Click Apply, and then close all Local Security Policy dialog boxes.
+d.Click Apply, and then close all Local Security Policy dialog boxes.
 
 
 2.7 Enable Trace flag 1117 (ESXi and AHV)
@@ -156,7 +156,7 @@ c.In the “startup parameters” tab , on the specify a startup parameter: Type
 .. figure:: images/Lab220.png
 
 
-d.	Restart SQL server service -
+d.Restart SQL server service -
 
 .. figure:: images/Lab221.png
 
@@ -173,6 +173,7 @@ Using DBCC Loginfo to check VLF size
 
 2.9 Setup Log in SQL server (ESXi and AHV)
 +++++++++++++++++++++++++++++++++++++++++
+
 
 a.Select the database you created , and selet the “Properties”
 
@@ -197,7 +198,8 @@ d.In the “AutoGrowth/Maxsize” , Click “...” , tick the “Enable Autogro
 +++++++++++++++++++++++++++++++++
 
 When your VM vCPU Under eight vCPU , please configure same number of temp data files for tempDB. Ex: if you have four vCPU just configure four tempDB datafiles. If your VM is eight CPU or above start from eight temp files. Start with two vDisk with tempDB, one vdisk for templog , to separate the IO load. In this lab , we create eight tempDB data files.
- After SQL 2016 , SQL server will create multiple tempDB datafiles for you. But you need to check the location by yourself
+
+After SQL 2016 , SQL server will create multiple tempDB datafiles for you. But you need to check the location by yourself.
 
 
 2.11 How to change Original Tempdb data & log location (ESXi and AHV)
@@ -372,20 +374,20 @@ c.In the NIC teaming tab , Load Balancing ,choose the “Route based on originat
 
 In Nutanix, because we are web-scale system . There is nothing need to configure in the Nutanix level . But some of the rule must be follow
 
-a.	Single Container – Simple make things beauty. We can have second container, but that will depends on the CVM processor usage.
+a.Single Container – Simple make things beauty. We can have second container, but that will depends on the CVM processor usage.
 
-b.	Node choose- When you have heavy SQL IO , please choose high memory node. And follow the key concept , reserve memory and also set the right size of SQL instance memory. 
+b.Node choose- When you have heavy SQL IO , please choose high memory node. And follow the key concept , reserve memory and also set the right size of SQL instance memory. 
 
 2.22 Disable shadow clone
 +++++++++++++++++++++++++
 
 
-a.	Using ssh login to the CVM (anyone of them) , username: nutanix password:nutanix/4u case sensitive.
+a.Using ssh login to the CVM (anyone of them) , username: nutanix password:nutanix/4u case sensitive.
 
 .. figure:: images/lab250.png
 
 
-b.	using ncli command to disable shadow clone . ncli cluster edit-params enable-shadow-clones=false
+b.using ncli command to disable shadow clone . ncli cluster edit-params enable-shadow-clones=false
 
 
 .. figure:: images/lab251.png
@@ -394,6 +396,7 @@ b.	using ncli command to disable shadow clone . ncli cluster edit-params enable-
 +++++++++++++++++++++++
 
 SQL Server 2012 after – enable data compression (testing before go production ). And also enable Nutanix container level compression.
+
 
 .. figure:: images/lab252.png
 
