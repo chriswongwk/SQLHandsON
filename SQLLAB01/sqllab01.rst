@@ -99,24 +99,24 @@ I show 100 users running concurrently. But you can try different users and see i
 When you add more users then you saw the TPM is not coming up . That means you have some bottleneck in CPU, Memory or IO. You need to figure out why ? Using our Prism and Window performance monitor tools to diagnostic the bottleneck
 Steps –
 
-a.	Expand the Virtual Users section and double click Options.
+1.Expand the Virtual Users section and double click Options.
 
-b.	The number of virtual users depends on the configuration used to create the database.
+2.The number of virtual users depends on the configuration used to create the database.
 TPC- C recommends using a 10x ratio to prevent row locking. Accordingly, if you defined your warehouse count (scale) as 1,000,
 then set the Virtual Users to 100.
 
-c.	For the TPC-C driver script, HammerDB recommends leaving the Iterations, User Delays,
+3.For the TPC-C driver script, HammerDB recommends leaving the Iterations, User Delays,
 and Repeat Delays at the “default settings” and to modify only the Total Transactions per User,
 or total iterations value, inside the Driver Script.
 
-d.	 Select the Show Output checkbox to enable error messages in the console.
+4.Select the Show Output checkbox to enable error messages in the console.
 
-e.	Click OK.
+5.Click OK.
 
 .. figure:: images/sql07.png
 
 
-f.	Click run
+6.Click run
 
 
 .. figure:: images/sql08.png
