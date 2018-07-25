@@ -1,9 +1,9 @@
 .. Adding labels to the beginning of your lab is helpful for linking to the lab from other pages
 .. _sqllab02:
 
--------------------------------------
-Lab 2: SQL best practice step by step
--------------------------------------
+----------------------------------------
+Lab 2: Apply Microsoft SQL best practice
+----------------------------------------
 
 2.1 Apply the SQL best practice
 +++++++++++++++++++++++++++++++

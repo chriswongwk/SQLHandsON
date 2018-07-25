@@ -2,7 +2,7 @@
 .. _example_lab_1:
 
 ----------------------
-Lab 1:Running HammerDB
+Lab 1: Running HammerDB
 ----------------------
 
 1.1 Download the HammerDB
