@@ -158,7 +158,7 @@ c.In the “startup parameters” tab , on the specify a startup parameter: Type
 
 d.	Restart SQL server service -
 
-.. figure:: images/lab221.png
+.. figure:: images/Lab221.png
 
 
 2.8 Log File Design (ESXi and AHV)
