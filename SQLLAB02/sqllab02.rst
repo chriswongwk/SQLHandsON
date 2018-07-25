@@ -45,39 +45,39 @@ a.Configure Multiple PVSCSI in the ESXi VM
 
 b.Select VM from vCenter Console , then Choose “Edit”. That will show the “Virtual Machine Properties”. Then click “Add”
 
-.. figure:: images/lab203.png
+.. figure:: images/Lab203.png
 
 c.After click “Add” , will show a “Add Hardware” page , please choose type “Hard Disk” . Click Next.
 
-.. figure:: images/lab204.png
+.. figure:: images/Lab204.png
 
 d.Choose “Create a new virtual disk “ then click “Next”
 
-.. figure:: images/lab205.png
+.. figure:: images/Lab205.png
 
 e.Enter your Capacity and choose “Thin Provision ” disk . then click “Next”.
 
-.. figure:: images/lab206.png
+.. figure:: images/Lab206.png
 
 f.choose “Virtual Device Node” SCSI “1.0” , ESXi will create PVSCSI1 for you automatically.
 
-.. figure:: images/lab207.png
+.. figure:: images/Lab207.png
 
 
 g.make sure the new created SCSI is PVSCSI. 
 
-.. figure:: images/lab208.png
+.. figure:: images/Lab208.png
 
 h.After you created all vdisk SQL needs, will look like this .
 
 in the AHV , you just need to creat the vdisks not need to configure the scsi cards . ( These show user why Nutanix make things simple )
 
 
-.. figure:: images/lab209.png
+.. figure:: images/Lab209.png
 
 After you create the vdisk will like this
 
-.. figure:: images/lab210.png
+.. figure:: images/Lab210.png
 
 
 2.4 Format the vdisk using 64k block size (ESXi and AHV)
@@ -87,13 +87,13 @@ format the NTFS file system to 64K.
 
 
 
-.. figure:: images/lab211.png
+.. figure:: images/Lab211.png
 
 After you did every disk format , you will see this in the OS level , you will see drives like this – Two SQL data disk, one SQL log disk . Two SQL TempDB disk , and one templog disk.
 
 
 
-.. figure:: images/lab212.png
+.. figure:: images/Lab212.png
 
 2.5 SQL Disk Configuration – Datafile (ESXi and AHV)
 ++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -102,12 +102,12 @@ Per CPU per files – for example , if you have 4 vCPU and now your database is 
 
 a.Click the user database and go properties – choose autogrowth/ Maxisize , default is 1MB, unlimited
 
-.. figure:: images/lab213.png
+.. figure:: images/Lab213.png
 
 b.Change the size to 256 or 512 MB per growth
 
 
-.. figure:: images/lab214.png
+.. figure:: images/Lab214.png
 
 
 2.6 Enable IFI (Instant File Initialization) (ESXi and AHV)
@@ -117,17 +117,17 @@ When we extend the datafile , we do not need to wait the “Zero” be written i
 
 a.On the computer where the backup file will be created, open the Local Security Policy application (secpol.msc).
 
-.. figure:: images/lab215.png
+.. figure:: images/Lab215.png
 
 
 b.In the left pane, expand Local Policies, and then click User Rights Assignment. In the right pane, double-click Perform volume maintenance tasks.
 
-.. figure:: images/lab216.png
+.. figure:: images/Lab216.png
 
 
 c.Click Add User or Group and add any user accounts that are used for backups.
 
-.. figure:: images/lab217.png
+.. figure:: images/Lab217.png
 
 d.	Click Apply, and then close all Local Security Policy dialog boxes.
 
@@ -142,18 +142,18 @@ Steps
 
 a.Choose SQL Server Configuration Manager - 
 
-.. figure:: images/lab218.png
+.. figure:: images/Lab218.png
 
 
 b.Choose “SQL Server Services” , double click SQL Server (MSSQLSERVER) 
 
 
-.. figure:: images/lab219.png
+.. figure:: images/Lab219.png
 
 c.In the “startup parameters” tab , on the specify a startup parameter: Type –t1117, click Add and Apply
 
 
-.. figure:: images/lab220.png
+.. figure:: images/Lab220.png
 
 
 d.	Restart SQL server service -
@@ -168,7 +168,7 @@ VLF- subset of the logifle , many VLF will compose one logfile. If the VLFs too 
 Using DBCC Loginfo to check VLF size
 
 
-.. figure:: images/lab222.png
+.. figure:: images/Lab222.png
 
 
 2.9 Setup Log in SQL server (ESXi and AHV)
@@ -176,21 +176,21 @@ Using DBCC Loginfo to check VLF size
 
 a.Select the database you created , and selet the “Properties”
 
-.. figure:: images/lab223.png
+.. figure:: images/Lab223.png
 
 
 b.In the “Files” , check the File type is Log . that is the log for this database. Make sure the location of the log file is different from data files.
 
 
-.. figure:: images/lab224.png
+.. figure:: images/Lab224.png
 
 c.Select the initial Size (MB) , and input 4096 or 8192 depends on your database log requirement .
 
-.. figure:: images/lab225.png
+.. figure:: images/Lab225.png
 
 d.In the “AutoGrowth/Maxsize” , Click “...” , tick the “Enable Autogrowth” and File Growth select in Megabytes input 4096 or 8192 , depends on your initial size. (should be same). Click “OK”.
 
-.. figure:: images/lab226.png
+.. figure:: images/Lab226.png
 
 
 2.10 TempDB Desing (ESXi and AHV)
@@ -208,7 +208,7 @@ The original tempDB is locate in the C: driver, so it is terrible configuration.
 
 a.Original tempDB location . Open the tempDB Properties , choose the Files . You can see the current tempDB datafile and log location.
 
-.. figure:: images/lab227.png
+.. figure:: images/Lab227.png
 
 b.Go SQL Query - Issue those SQL to change tempdb data and log files location. We can’t use the GUI to change the location of TempDB files. Please use SQL command to change location.
 
