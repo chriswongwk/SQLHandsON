@@ -50,47 +50,87 @@ After you learned, You can apply this to your POC or when customer want running 
 In this guide , we didn't mention about how to install Microsoft SQL Server.
 If you want learn how to installed Microsoft SQL Server , you can find ”how to” in these links.
 
-- Microsoft SQL Server installation page :
-https://docs.microsoft.com/en-us/sql/database-engine/install-windows/install-sql-server?view=sql-server-2017
+
+**Just One Thing. The HOL is simple and short. Read carefully** 
+
+What's New
+++++++++++
+
+- Workshop updated for the following software versions:
+  - AOS 5.9.1
+
+Access Instructions
++++++++++++++++++++
+
+The Nutanix Hosted POC environment can be accessed a number of different ways:
+
+Citrix XenDesktop
+.................
+
+https://citrixready.nutanix.com - *Accessible via the Citrix Receiver client or HTML5*
+
+Or, 
+
+VMware Horizon View
+...................
+
+https://hostedpoc.nutanix.com  - *Accessible via the View client or HTML5*
 
 
+**Nutanix Employees** - Use your NUTANIXDC credentials
+
+**Non-Employees** - **Username:** POCxxx-User01 (up to POCxxx-User20), **Password:** partnerSE/4u
+
+We have 4 cluster today, each cluster will be shared with 10 participants. You will be informed your cluster number and user number before you start your HOL.
+
+POC-031, Brian	Fu, RonaldChoy, Benny	Ho
+
+POC-086, Gary	Lau, Yuki	Leung, Brian	Ku
+
+POC-087, Ryan	ng, David	Chow, Jonathan Chan
+
+POC-089, Brian	Tse, Ryan	Chan, Peter	Cheng, Linus	Yip
+
+If your VDI is slow try to use this VPN.
+
+Non-Employee Pulse Secure VPN
+https://lab-vpn.nutanix.com - Username: POCxxx-User01 (up to POCxxx-User20), Password: partnerSE/4u
+
+Under Client Application Sessions, click Start to the right of Pulse Secure to download the client.
+
+Install and open Pulse Secure.
+
+Add a connection:
+
+Type - Policy Secure (UAC) or Connection Server
+Name - HPOC VPN
+Server URL - lab-vpn.nutanix.com
 
 ---------------
 Lab Environment
 ---------------
 
 -Hardware:
-
-  - Nutanix NX ,HX , XC any platform that Nutanix AOS running inside
-
-  - Nutanix CE also can be Lab environment as well
-
-  - You can download Nutanix CE from here. https://www.nutanix.com/products/community-edition/
+NX1365G54/G5
 
 -Software :
 
  - Microsoft Windows Server download -
 
- https://www.microsoft.com/en-us/download/windows.aspx
+\\hpoc-afs\se\chriswong\iso\windows
 
  - Microsoft SQL Server download -
+ 
+\\hpoc-afs\se\chriswong\iso\windows
 
- https://www.microsoft.com/en-us/download/windows.aspx
-
- - Recommend using Microsoft SQL Server 2012 database version or above for this lab
 
 Setup Lab
 +++++++++
-After you foundation your Nutanix blocks (How to Foundation Nutanix Block)
-You can watch the video from https://www.nutanix.com/2014/07/15/nutanix-foundation-demo-video-from-bare-metal-to-production-in-minutes/
 
-The foundation software is available on
-
-https://portal.nutanix.com/#/page/foundation/list
-
-After finish foundation, you can create a VM that content Oracle Linux OS. Install Oracle database follow this link -
-
-https://www.youtube.com/watch?v=CwHetPzsQBY
+Upload the WIndows ISO
+create a Windows VM
+Install Hammer DB
+Install SQL server
 
 
-If you have any question, you can send a email to albert.chen@nutanix.com. I will happy to teach you how to setup a environment or provide the base VM image to you.
+
