@@ -214,6 +214,7 @@ a.Original tempDB location . Open the tempDB Properties , choose the Files . You
 
 b.Go SQL Query - Issue those SQL to change tempdb data and log files location. We can’t use the GUI to change the location of TempDB files. Please use SQL command to change location.
 
+"ALTER DATABASE database_name MODIFY FILE ( NAME = logical_name , FILENAME = 'new_path\os_file_name' ) "
 
 .. figure:: images/lab228.png
 
