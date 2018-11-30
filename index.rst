@@ -91,6 +91,40 @@ POC-087, Ryan	ng, David	Chow, Jonathan Chan
 
 POC-089, Brian	Tse, Ryan	Chan, Peter	Cheng, Linus	Yip
 
+
+
+Cluster IP: https://10.21.XX.37:9440/console/#login
+
+Position: A CVM IP: 10.21.XX.29 Hypervisor IP: 10.21.XX.25 IPMI IP: 10.21.XX.33
+Position: B CVM IP: 10.21.XX.30 Hypervisor IP: 10.21.XX.26 IPMI IP: 10.21.XX.34
+Position: C CVM IP: 10.21.XX.31 Hypervisor IP: 10.21.XX.27 IPMI IP: 10.21.XX.35
+Position: D CVM IP: 10.21.XX.32 Hypervisor IP: 10.21.XX.28 IPMI IP: 10.21.XX.36
+
+
+LOGIN CREDENTIALS
+
+Prism UI Credentials: admin/partnerSE/4u
+CVM Credentials: nutanix/partnerSE/4u
+AHV Host Credentials: root / partnerSE/4u
+
+
+CLUSTER CREATION DETAILS
+
+Number of Initial Nodes: all
+AOS Version: 5.8.2
+Hypervisor Version: AHV 20170830.166 (5.8.2)
+
+
+NETWORK INFORMATION
+
+Subnet Mask: 255.255.255.128
+Gateway: 10.21.XX.1
+Nameserver IP: 10.21.253.10
+
+
+
+
+
 If your VDI is slow try to use this VPN.
 
 Non-Employee Pulse Secure VPN
